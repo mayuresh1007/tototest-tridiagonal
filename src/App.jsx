@@ -3,6 +3,7 @@ import "./App.css";
 import TodoList from "./components/TodoList";
 import TodoForm from "./components/TodoForm";
 import { TodosContext } from "../TodoContext";
+import Calulator from "./components/Calulator";
 
 const todosTemplate = [
   {
@@ -42,7 +43,9 @@ function App() {
 
   return (
     <div className="container">
+      <Calulator/>
       <TodosContext.Provider value={{todos,setTodos}}>
+        
         <h1>hello context api</h1>
         <TodoList />
         <TodoForm />
